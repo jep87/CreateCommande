@@ -260,19 +260,18 @@
   </head>
   <body>
     <header>
-      <h1>📱 MyDé</h1>
+      <h1>📱 CreateCommande</h1>
       <p>Permissions et Fonctionnalités de l'Application</p>
     </header>
     <div class="container">
       <!-- Section Présentation -->
       <section>
         <h2>À propos de l'application</h2>
-        <p data-path-to-node="3"> <strong></strong> MyDé est une application
-          intuitive et ludique conçue pour smartphone, idéale pour tous vos
-          tirages au sort et sessions de jeux de société.</p>
-        <p data-path-to-node="4">Avec son interface visuelle simple, moderne et
-          colorée, l'application offre une expérience utilisateur fluide. Le
-          petit plus ? Secouez simplement votre téléphone pour lancer les dés !</p>
+        <p data-path-to-node="3"> <strong></strong> Application mobile destinée
+          aux commerciaux terrain. Elle permet de créer des commandes clients,
+          de les envoyer via FTP au serveur de l'entreprise, de consulter
+          l'historique des envois et de gérer le référentiel articles/clients
+          synchronisé depuis le serveur.</p>
         <div class="info-box">
           <h4>📊 Version</h4>
           <p><strong>1.0.1</strong> - Disponible sur iOS App Store et Google
@@ -286,85 +285,75 @@
         <div class="permission-grid"> </div>
         <h3 style="margin-top: 40px;">Android - Permissions AndroidManifest.xml</h3>
         <table>
-          <thead>
+          <tbody>
             <tr>
               <th>Permission</th>
               <th>Raison</th>
             </tr>
-          </thead>
-          <tbody>
             <tr>
-            </tr>
-            <tr>
-              <td><code>android.permission.WRITE_EXTERNAL_STORAGE</code></td>
-              <td>Écriture de fichiers</td>
-              <td><span class="platform-badge platform-android">NORMAL</span></td>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
+              <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+              <td>Acces Reseau<br>
+              </td>
+              <td><span class="platform-badge platform-android">NORMAL<br>
+                </span></td>
             </tr>
           </tbody>
         </table>
+        <table>
+          <tbody>
+            <tr>
+              <td><code>android.permission.CAMERA &nbsp; &nbsp; &nbsp;&nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </code></td>
+              <td>Lecture codebarre</td>
+              <td><span class="platform-badge platform-android">NORMAL<br>
+                </span></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <br>
       </section>
       <!-- Section Fonctionnalités -->
       <section>
         <h2>✨ Fonctionnalités</h2>
         <ul class="feature-list">
-          <li>
-            <p data-path-to-node="6,0,0"><b data-path-to-node="6,0,0" data-index-in-node="0">Large
-                choix de dés :</b></p>
-            <ul data-path-to-node="6,0,1">
-              <li>
-                <p data-path-to-node="6,0,1,0,0"><b data-path-to-node="6,0,1,0,0"
-                    data-index-in-node="0">Dé à 4 faces (D4) :</b> Format
-                  triangulaire.</p>
-              </li>
-              <li>
-                <p data-path-to-node="6,0,1,1,0"><b data-path-to-node="6,0,1,1,0"
-                    data-index-in-node="0">Dé à 6 faces (D6) :</b> Format
-                  classique avec animation et historique.</p>
-              </li>
-              <li>
-                <p data-path-to-node="6,0,1,2,0"><b data-path-to-node="6,0,1,2,0"
-                    data-index-in-node="0">Dé à 8 faces (D8) :</b> Format
-                  diamant.</p>
-              </li>
-              <li>
-                <p data-path-to-node="6,0,1,3,0"><b data-path-to-node="6,0,1,3,0"
-                    data-index-in-node="0">Dé à 10 faces (D10) :</b> Format
-                  décagone.</p>
-              </li>
-              <li>
-                <p data-path-to-node="6,0,1,4,0"><b data-path-to-node="6,0,1,4,0"
-                    data-index-in-node="0">Dé à 12 faces (D12) :</b> Format
-                  dodécagone.</p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <p data-path-to-node="6,1,0"><b data-path-to-node="6,1,0" data-index-in-node="0">Pile
-                ou Face :</b> Un module dédié avec le visuel d'une pièce de
-              monnaie.</p>
-          </li>
-          <li>
-            <p data-path-to-node="6,2,0"><b data-path-to-node="6,2,0" data-index-in-node="0">Navigation
-                fluide :</b> Un menu de sélection rapide pour changer de mode en
-              un clin d'œil.</p>
-          </li>
-          <li>
-            <p data-path-to-node="6,3,0"><b data-path-to-node="6,3,0" data-index-in-node="0">Suivi
-                des scores :</b> Un historique des lancers personnalisé selon le
-              mode choisi.</p>
-          </li>
-          <li>
-            <p data-path-to-node="6,4,0"><b data-path-to-node="6,4,0" data-index-in-node="0">Immersion
-                totale :</b> Des animations visuelles dynamiques et des retours
-              sonores réalistes lors de chaque tirage.</p>
-          </li>
+          📋 Commandes<br>
+          - Saisie de commande : ajout d'articles par recherche textuelle, scan
+          de code-barres ou sélection depuis les favoris<br>
+          - Visualisation : liste des commandes en cours par client avec détail
+          des lignes (article, description, quantité, prix unitaire)<br>
+          - Modification : édition de la quantité, du prix, ajout d'un
+          commentaire, marquage article gratuit<br>
+          - Suppression : suppression d'une commande complète par client<br>
+          <br>
+          🚀 Envoi<br>
+          - Export JSON et envoi vers le serveur de l'entreprise<br>
+          - Sélection des clients à envoyer avant l'envoi<br>
+          - Notification de confirmation après envoi réussi<br>
+          <br>
+          📦 Articles<br>
+          - Recherche d'articles par référence, désignation ou code-barres<br>
+          - Scan code-barres intégré (caméra)<br>
+          - Affichage du prix unitaire, de la désignation et des livraisons
+          disponibles<br>
+          - Mise à jour du référentiel articles depuis le serveur <br>
+          <br>
+          👥 Clients<br>
+          - Sélection du client depuis la base locale synchronisée<br>
+          - Création d'un nouveau client avec validation (SIRET, e-mail,
+          longueur des champs)<br>
+          - Visualisation de la fiche client<br>
+          <br>
+          📜 Historique<br>
+          - Consultation de **tous les historiques d'envois** par client et par
+          date/heure<br>
+          - Chaque envoi est identifié par un **SendId** unique (horodatage à la
+          milliseconde)<br>
+          - Filtrage et recherche dans l'historique<br>
+          - Rechargement d'un historique dans la commande en cours<br>
+          - Suppression d'un historique
         </ul>
       </section>
-      <!-- Section Sécurité -->
       <section>
         <h2>🔒 Sécurité et Confidentialité</h2>
         <h3>Chiffrement des données</h3>
@@ -414,11 +403,11 @@
         </ul>
       </section>
       <div class="last-update">
-        <p>Dernière mise à jour : 25 janvier 2026</p>
+        <p>Dernière mise à jour : 1 juin 2026</p>
       </div>
     </div>
     <footer>
-      <p>© 2026 MyDé. Tous droits réservés.</p>
+      <p>© 2026 CreateCommande. Tous droits réservés.</p>
       <p> <a href="#politique-privacy">Politique de confidentialité</a> | <a href="#conditions">Conditions
           d'utilisation</a> | <a href="#mentions-legales">Mentions légales</a>
       </p>
